@@ -1,0 +1,21 @@
+[package]
+name = "nove_rewards"
+version = "0.1.0"
+description = "NOVE rank rewards vault — claimable one-shot rank rewards"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "nove_rewards"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = "=1.1.2"
+anchor-spl = { version = "=1.1.2", features = ["token", "associated_token"] }

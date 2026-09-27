@@ -1,0 +1,18 @@
+[package]
+name = "rewards-integration-tests"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+anchor-lang = "=1.1.2"
+anchor-spl = { version = "=1.1.2", features = ["token"] }
+anchor-litesvm = "=0.4.0"
+litesvm-utils = "=0.4.0"
+nove_rewards = { path = "../programs/nove_rewards", features = ["no-entrypoint"] }
+solana-signer = "=3.0.1"
+solana-keypair = "3"
+solana-instruction = "3"
+solana-transaction = { version = "=3.0.1", features = ["bincode"] }
+spl-token = "=9.0.0"
+spl-associated-token-account = "=8.0.0"
